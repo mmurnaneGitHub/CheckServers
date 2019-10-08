@@ -1,0 +1,26 @@
+================================================================
+CED Web Apps Troubleshooting Help
+================================================================
+
+Reasons for CED Web Apps Problems (in order of probability):
+ 1. Network 
+	Causes: Individual servers not working, communication problem between servers, F5 problems (public apps not working).
+	Check: Script, as a scheduled task, checks each server and sends an email report out at 7 am daily.  If errors are present, forward email to Jimmie Farmer.
+	Run Network Check Anytime - \\geobase-win\ced\GADS\R2017\R398\Batch\Ping_Email.bat
+
+ 2. ArcGIS Enterprise 
+	Causes: ArcGIS Enterprise machines or services not working correctly, database issues.
+	Check 1: Test all web services used with http://wsitd03/website/QA/QueryJSON.html.  Use the browser refresh several times.  If error messages are persistent after several refreshes, contact Steve Schunzel to check ArcGIS Enterprise log files.
+	Check 2: Run the auto-clicking pages below to check the public and staff DART by using the link below. Use F12 in browser to reveal errors in console.  The Identify Results will test several web services and individual layers.  If any error messages appear, contact Steve Schunzel to check ArcGIS Enterprise log files.
+	          Run Public DART Check - https://wspdsmap.cityoftacoma.org/website/DART/staff/index_TEST.html
+	          Run Link Staff DART Check - http://wsitd03/website/DART/StaffMap/index_TEST.html
+
+ 3. Database Problems 
+	Causes: Database connections or schema changes.
+	Check: The ArcGIS Enterprise log file check in Reason #2 should lead here if there is a database problem.
+
+ 4. Application Errors
+	Causes: Recent updates (programming, windows update, individual web service changes) 
+	Check: Use F12 in browser to reveal errors in console.  If only one application is having a problem contact developer; if multiple apps are having problems it is likely to be one of the three reasons above.
+
+ 
