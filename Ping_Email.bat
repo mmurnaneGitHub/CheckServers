@@ -1,8 +1,8 @@
 :: *****************************************************************************
-:: Ping_Email.bat  5/9/2018 
+:: Ping_Email.bat  10/16/2019 
 :: Summary: CED Web Apps Server Report
 ::
-:: Description: Ping servers that support CED web apps and email report. 
+:: Description: Ping servers that support GADS web apps and email report. 
 ::
 :: Scheduled Task - Everyday at 7:00 am.
 ::
@@ -18,7 +18,7 @@
 :: Record starting time
 Echo. > %LogDir%%theDate%.log
 Echo ============================================================================  >> %LogDir%%theDate%.log
-Echo CED Web Apps Server Report  >> %LogDir%%theDate%.log
+Echo GADS Web Apps Server Report  >> %LogDir%%theDate%.log
 Echo ============================================================================  >> %LogDir%%theDate%.log
 Echo. >> %LogDir%%theDate%.log 2>&1
 Echo Start time:  >> %LogDir%%theDate%.log
@@ -26,19 +26,19 @@ Echo Start time:  >> %LogDir%%theDate%.log
 
 ::  Send ping output to log file (Echo. = blank line)
 Echo. >> %LogDir%%theDate%.log 2>&1
-Echo ********** PING CED Internal Server by Name (wsitd03):  >> %LogDir%%theDate%.log 2>&1
+Echo ********** PING GADS Internal Server by Name (wsitd03):  >> %LogDir%%theDate%.log 2>&1
  ping -a wsitd03  >> %LogDir%%theDate%.log 2>&1
 
 Echo. >> %LogDir%%theDate%.log 2>&1
-Echo ********** PING CED Internal Server by IP (10.200.1.106): 1>>%LogDir%%theDate%.log 2>&1
+Echo ********** PING GADS Internal Server by IP (10.200.1.106): 1>>%LogDir%%theDate%.log 2>&1
  ping -a 10.200.1.106  >> %LogDir%%theDate%.log 2>&1
 
 Echo. >> %LogDir%%theDate%.log 2>&1
-Echo ********** PING CED Public Web Server by Name (wspdsmap.cityoftacoma.org): 1>>%LogDir%%theDate%.log 2>&1
+Echo ********** PING GADS Public Web Server by Name (wspdsmap.cityoftacoma.org): 1>>%LogDir%%theDate%.log 2>&1
  ping -a wspdsmap.cityoftacoma.org  >> %LogDir%%theDate%.log 2>&1
 
 Echo. >> %LogDir%%theDate%.log 2>&1
-Echo ********** PING CED Public Web Server by IP (131.191.240.68): 1>>%LogDir%%theDate%.log 2>&1
+Echo ********** PING GADS Public Web Server by IP (131.191.240.68): 1>>%LogDir%%theDate%.log 2>&1
  ping -a 131.191.240.68 >> %LogDir%%theDate%.log 2>&1
 
 Echo. >> %LogDir%%theDate%.log 2>&1
