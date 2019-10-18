@@ -19,13 +19,13 @@ Set fso = CreateObject("Scripting.FileSystemObject")
 Set f = fso.OpenTextFile(FileToBeUsed, ForReading)
 Set objCDO1 = CreateObject("CDO.Message")
 
-objCDO1.Textbody = "Please review GADS Web Apps Server Report below. If errors are present: forward this email to Jimmie Farmer & run the Checks below." & vbCrLf & vbCrLf _
+objCDO1.Textbody = "STEP 1: Please review GADS Web Apps Server Report below. If errors are present: forward this email to Jimmie Farmer & run the Checks below." & vbCrLf & vbCrLf _
 			& "Detailed Troubleshooting Help: " & HelpFile & vbCrLf _
 			& "Today's Log File: " & FileToBeUsed & vbCrLf & vbCrLf _
-			& "Run Web Service Check: " & WebServiceLink & vbCrLf _
-			& "Run Public DART Check: " & PublicLink & vbCrLf _
-			& "Run Staff DART Check: " & StaffLink & vbCrLf & vbCrLf _
-			& "Check Application Dashboard: " & DashboardLink & vbCrLf & vbCrLf _
+			& "STEP 2: Run Web Service Check: " & WebServiceLink & vbCrLf _
+			& "STEP 3: Run Public DART Check: " & PublicLink & vbCrLf _
+			& "STEP 4: Run Staff DART Check: " & StaffLink & vbCrLf & vbCrLf _
+			& "STEP 5: Check Application Dashboard: " & DashboardLink & vbCrLf & vbCrLf _
 			& "Rerun Network Check (this report): " & NetworkLink & vbCrLf _
 			& f.ReadAll
 
